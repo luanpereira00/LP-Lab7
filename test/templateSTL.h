@@ -59,4 +59,17 @@ void print_elements(const TContainer& collection, const char* label="",  const c
 	cout << endl;
 }
 
+template<typename TContainer> 
+int solveRPN(const TContainer& collection){
+	auto ted = const_cast<TContainer*>(&collection);
+
+
+	while(!ted->empty()){
+		cout << ted->top() << " ";
+		ted->pop();
+	}
+	return 0;
+	
+}
+
 #endif
