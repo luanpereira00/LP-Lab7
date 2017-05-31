@@ -60,15 +60,47 @@ void print_elements(const TContainer& collection, const char* label="",  const c
 }
 
 template<typename TContainer> 
-int solveRPN(const TContainer& collection){
-	auto ted = const_cast<TContainer*>(&collection);
-
-
+int solveRPN(const TContainer collection){
+	auto *ted = const_cast<TContainer*>(&collection);
+	TContainer pilha;
+	int op1, op2; 
+	char opr;
 	while(!ted->empty()){
-		cout << ted->top() << " ";
+		pilha.push(ted->top());
+
 		ted->pop();
 	}
-	return 0;
+
+	cout << pilha.top() << endl;
+	
+	op1=pilha.top()-48; //GAMBIARRA?
+	
+	pilha.pop();
+	cout << "OP1=" <<op1 << " " <<pilha.top() << endl;
+	bool flag=true;
+	int result=0;
+	while(!pilha.empty()){
+		if(!flag) op1=result;
+		flag=false;
+		
+		
+		op2=pilha.top()-48;
+		cout << "OP2=" <<op2 << " " <<pilha.top() << endl;
+		pilha.pop();
+		
+		opr=pilha.top();
+		pilha.pop();
+
+		cout << "-> " << op1 << opr << op2 << endl;
+
+		if(opr=='+') result = op1+op2;
+		if(opr=='-') result = op1-op2;
+		if(opr=='*') result = op1*op2;
+		if(opr=='/') result = op1/op2;
+
+		cout << endl << "Result = " << result << endl;
+	}
+	return result;
 	
 }
 

@@ -15,7 +15,6 @@ int main() {
 	pilha.push('5');
 	pilha.push('*'); 
 	
-	cout << solveRPN(pilha) << endl;
-	cout << pilha.top() << endl;
+	cout << "Resultado: " << solveRPN(pilha) << endl;
 	return 0; 
 }
