@@ -1,14 +1,12 @@
 #ifndef TEMPLATE_STL_H
 #define TEMPLATE_STL_H
 
+#include <iostream>
+using std::cout;
+using std::endl;
+
 #include <numeric>
 using std::accumulate;
-
-#include <iterator>
-using std::iterator;
-
-#include <vector>
-using std::vector;
 
 template <typename InputIterator> 
 InputIterator closest2mean(InputIterator first, InputIterator last){
@@ -48,8 +46,17 @@ InputIterator closest2mean(InputIterator first, InputIterator last){
 		it++;
 	}
 
-	//cout << soma << " - " << cont << " - " << media << endl;
+	cout << "Media: " << media << endl;
 	return it;
+}
+
+template<typename TContainer> 
+void print_elements(const TContainer& collection, const char* label="",  const char separator=' '){
+	cout << label << " ";
+	for(auto it = collection.begin(); it!=collection.end(); ++it){
+		cout << *it << separator;
+	}
+	cout << endl;
 }
 
 #endif
