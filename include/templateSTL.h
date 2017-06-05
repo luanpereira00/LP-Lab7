@@ -103,5 +103,4 @@ int solveRPN(const TContainer collection){
 	return result;
 	
 }
-
 #endif
