@@ -5,8 +5,13 @@
 using std::cout;
 using std::endl;
 
+#include <string>
+using std::string;
+
 #include <numeric>
 using std::accumulate;
+
+#include <cstdlib>
 
 template <typename InputIterator> 
 InputIterator closest2mean(InputIterator first, InputIterator last){
@@ -64,41 +69,47 @@ int solveRPN(const TContainer collection){
 	auto *ted = const_cast<TContainer*>(&collection);
 	TContainer pilha;
 	int op1, op2; 
-	char opr;
+	string aux;
+	string opr;
 	while(!ted->empty()){
 		pilha.push(ted->top());
 
 		ted->pop();
 	}
 
-	cout << pilha.top() << endl;
+
+	//cout << pilha.top() << endl;
 	
-	op1=pilha.top()-48; //GAMBIARRA?
+	aux = pilha.top();
+
+	op1=atoi(aux.c_str());
 	
 	pilha.pop();
-	cout << "OP1=" <<op1 << " " <<pilha.top() << endl;
+	
 	bool flag=true;
 	int result=0;
 	while(!pilha.empty()){
 		if(!flag) op1=result;
+		cout << "OP1 = " << op1 << endl;
 		flag=false;
 		
-		
-		op2=pilha.top()-48;
-		cout << "OP2=" <<op2 << " " <<pilha.top() << endl;
+		aux = pilha.top();
+		op2=atoi(aux.c_str());
+		cout << "OP2 = " <<op2 << endl;
 		pilha.pop();
 		
-		opr=pilha.top();
+		opr = pilha.top();
+		cout << "OPR = " << opr << endl;
 		pilha.pop();
 
-		cout << "-> " << op1 << opr << op2 << endl;
+		cout << "-> " << op1 << opr << op2;
 
-		if(opr=='+') result = op1+op2;
-		if(opr=='-') result = op1-op2;
-		if(opr=='*') result = op1*op2;
-		if(opr=='/') result = op1/op2;
+		if(opr=="+") result = op1+op2;
+		if(opr=="-") result = op1-op2;
+		if(opr=="*") result = op1*op2;
+		if(opr=="/") result = op1/op2;
 
-		cout << endl << "Result = " << result << endl;
+		cout << " = " << result << endl << endl;
 	}
 	return result;
 	

@@ -4,16 +4,19 @@ using std::endl;
 
 #include <stack> 
 using std::stack; 
+
+#include <string>
+using std::string;
  
 #include "templateSTL.h"
 
-int main() {    
-	stack<char> pilha;
-	pilha.push('2');  
-	pilha.push('3');
-	pilha.push('+');
-	pilha.push('5');
-	pilha.push('*'); 
+int main(int argc, char ** argv) {    
+	stack<string> pilha;
+	int i=1;
+	while(i<argc){
+		pilha.push(argv[i]);
+		i++;  
+	}
 	
 	cout << "Resultado: " << solveRPN(pilha) << endl;
 	return 0; 

@@ -37,7 +37,7 @@ CFLAGS=-Wall -pedantic -ansi -std=c++11 -I. -I$(INC_DIR)
 # Ao final da compilacao, remove os arquivos objeto.
 all: init q1 q2 q3 q4 q6
 debug: CFLAGS += -g -O0
-debug: exec
+debug: init q1 q2 q3 q4 q6
 
 init:
 	@mkdir -p $(BIN_DIR)/
@@ -70,7 +70,7 @@ q2: $(OBJ_DIR)/q2.o
 
 # Alvo (target) para a construcao do objeto q2.o
 # Define os arquivos q2.cpp e templateSTL.h como dependencias.
-$(OBJ_DIR)/q2.o: $(SRC_DIR)/q1.cpp $(INC_DIR)/templateSTL.h 
+$(OBJ_DIR)/q2.o: $(SRC_DIR)/q2.cpp $(INC_DIR)/templateSTL.h 
 	$(CC) -c $(CFLAGS) -o $@ $<	
 
 # Alvo (target) para a construcao do executavel
