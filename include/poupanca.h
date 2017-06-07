@@ -11,6 +11,7 @@ private:
 
 public: 
 	Poupanca();
+	~Poupanca();
 	void setAniversario(Data d);
 	Data getAniversario();
 
@@ -20,7 +21,14 @@ public:
 	void atualiza();
 
 	float juros();
+
+	float jurosPositivos();
+	float jurosNegativos();
+
 	void setJuros(float j);
+	void criar();
+	int menu(int num);
+	string tipo();
 };
 
 

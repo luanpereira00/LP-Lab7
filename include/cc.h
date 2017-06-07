@@ -1,6 +1,8 @@
 #ifndef CC_H
 #define CC_H
 
+
+
 #include "conta.h"
 
 class ContaCorrente : public Conta {
@@ -11,6 +13,7 @@ private:
 
 public:
 	ContaCorrente();
+	~ContaCorrente();
 	void setLimite(int l);
 	int getLimite();
 
@@ -23,5 +26,7 @@ public:
 	float juros();
 
 	void criar();
+	int menu(int num);
+	string tipo();
 };
 #endif

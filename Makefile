@@ -120,13 +120,13 @@ $(OBJ_DIR)/q6.o: $(SRC_DIR)/q6.cpp $(INC_DIR)/conta.h $(INC_DIR)/cc.h $(INC_DIR)
 
 # Alvo (target) para a construcao do objeto q6.o
 # Define os arquivos poupanca.cpp e poupanca.h como dependencias.
-$(OBJ_DIR)/poupanca.o: $(SRC_DIR)/poupanca.cpp $(INC_DIR)/poupanca.h
+$(OBJ_DIR)/poupanca.o: $(SRC_DIR)/poupanca.cpp $(INC_DIR)/poupanca.h $(INC_DIR)/conta.h
 	$(CC) -c $(CFLAGS) -o $@ $<	
 
 # Alvo (target) para a construcao do objeto q6.o
 # Define os arquivos cc.cpp e cc.h como dependencias.
-$(OBJ_DIR)/cc.o: $(SRC_DIR)/cc.cpp $(INC_DIR)/cc.h
-	$(CC) -c $(CFLAGS) -o $@ $<		
+$(OBJ_DIR)/cc.o: $(SRC_DIR)/cc.cpp $(INC_DIR)/cc.h $(INC_DIR)/conta.h
+	$(CC) -c $(CFLAGS) -o $@ $<		 
 
 # Alvo (target) para a construcao do objeto q6.o
 # Define os arquivos data.cpp e data.h como dependencias.

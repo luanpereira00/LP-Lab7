@@ -1,8 +1,16 @@
+/**
+ * @file	q2.cpp
+ * @brief	Funcao principal que imprime elementos de um container
+ * @author	Luan Pereira (luanpereira00@outlook.com)
+ * @since	15/05/2017
+ * @date	15/05/2017
+ */
 #include <set> 
 using std::set; 
 
 #include "templateSTL.h"
 
+/** @brief Funcao principal */
 int main() {    
 	set<int> numeros;    
 	numeros.insert(3);    

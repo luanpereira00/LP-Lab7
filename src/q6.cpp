@@ -1,8 +1,10 @@
-#include "conta.h"
-#include "data.h"
-#include "poupanca.h"
-#include "cc.h"
-
+/**
+ * @file	q6.cpp
+ * @brief	Funcao principal que cria contas correntes e poupanca
+ * @author	Luan Pereira (luanpereira00@outlook.com)
+ * @since	15/05/2017
+ * @date	15/05/2017
+ */
 #include <iostream>
 using std::cout;
 using std::cin;
@@ -12,31 +14,65 @@ using std::endl;
 #include <vector> 
 using std::vector;
 
+#include "conta.h"
+#include "data.h"
+#include "poupanca.h"
+#include "cc.h"
+
+/** @brief Funcao principal */
 int main (){
 	int result, total;
 	bool endFlag=false;
-	vector<ContaCorrente> v;
-	vector<ContaCorrente>::iterator it;
+	vector<Conta*> v;
+	vector<Conta*>::iterator it;
 	uint num;
 	
 	do{
 		do{
+			cout << "=================================" << endl;
 			cout << "--- Conta ---" << endl;
-			cout << "1 - Criar Conta"<< endl;
-			cout << "2 - Remover Conta" << endl;
-			cout << "3 - Acessar Conta" << endl;
+			cout << "1 - Criar Conta Corrente"<< endl;
+			cout << "2 - Criar Conta Poupanca"<< endl;
+			cout << "3 - Listar Contas" << endl;
+			cout << "4 - Remover Conta" << endl;
+			cout << "5 - Acessar Conta" << endl;
 			cout << "0 - Sair" << endl;
 			cout << "Opcao: ";
 			cin >> total;
-		}while(total<0 or total>3);
-		ContaCorrente cc;
+			if(total<0 or total>5) cerr << "ERRO! OPCAO INVALIDA..." << endl;
+		}while(total<0 or total>5);
+		ContaCorrente *cc = new ContaCorrente;
+		Poupanca *pp = new Poupanca;
 		switch(total){
-			case 1: // criar		
-				cc.criar();
+			case 1: // criar	
+				
+				delete pp;
+				cc->criar();
 				v.push_back(cc);
-				cout << "Conta criada com sucesso!" << endl;
+				cout << "Conta corrente criada com sucesso!" << endl;
 			break;
-			case 2: //remover
+			case 2: // criar
+				
+				delete cc;		
+				pp->criar();
+				v.push_back(pp);
+				cout << "Conta poupanca criada com sucesso!" << endl;
+			break;
+			case 3:
+				it = v.begin();
+				num=1;
+				cout << "=================================" << endl;
+				cout << "--- Lista de Contas ---" << endl;
+				while(it!=v.end()){
+					cout << num << ": " << (*it)->tipo() << endl;
+					it++;
+					num++;
+				}
+				
+			break;
+			case 4: //remover
+				cout << "=================================" << endl;
+				cout << "--- Removendo Conta ---" << endl;
 				cout << "Digite o numero da conta que queres remover: ";
 				cin >> num;
 				if(num>0 and num<=v.size()) {
@@ -45,31 +81,27 @@ int main (){
 				}
 				else cerr << "IMPOSSIVEL REMOVER! O ELEMENTO NAO EXISTE..." << endl;
 			break;
-			case 3: //acessar
+			case 5: //acessar
+				cout << "=================================" << endl;
+				cout << "--- Acessar Conta ---" << endl;
 				cout << "Digite o numero da conta que queres acessar: ";
 				cin >> num;
 				if(num>0 and num<=v.size()) {
 					it = v.begin()+num-1;
 					do{	
-						do{
-							cout << "--- Conta " << num << " ---" << endl;
-							cout << "1 - Deposito"<< endl;
-							cout << "2 - Saque" << endl;
-							cout << "3 - Saldo" << endl;
-							cout << "0 - Sair" << endl;
-							cout << "Opcao: ";
-							cin >> result;
-						}while(result<0 or result>3);
+						result = (*it)->menu(num);
 
 						switch(result){
 							case 1: //deposito
-								it->deposito();
+								(*it)->deposito();
 							break;
 							case 2: //saque
-								it->saque();
+								(*it)->saque();
 							break;
 							case 3: //saldo
-								cout << "Saldo: " << it->saldo() << endl;
+							cout << "=================================" << endl;
+							cout << "--- Verificando Saldo ---" << endl;
+								cout << "Saldo: " << (*it)->saldo() << endl;
 							break;
 							default:
 							break;
@@ -80,10 +112,11 @@ int main (){
 				else cerr << "IMPOSSIVEL ACESSAR! O ELEMENTO NAO EXISTE..." << endl;
 				
 			break;
-			default:
+			case 0:
 				endFlag=true;
 			break;
 		}
 	}while(!endFlag);
+	cout << "=================================" << endl;
 	return 0;
 }
