@@ -76,7 +76,7 @@ public:
 	void setJuros(float j);
 
 	/** @brief Cria uma nova conta poupanca */
-	void criar();
+	void criar(Data *hoje);
 
 	/** @brief Menu para acoes do usuario */
 	int menu(int num);

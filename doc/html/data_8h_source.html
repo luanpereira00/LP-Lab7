@@ -3,16 +3,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.11"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>Laboratorio 7 - LP: Código-Fonte de include/data.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { init_search(); });
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -22,7 +21,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+  <td style="padding-left: 0.5em;">
    <div id="projectname">Laboratorio 7 - LP
    &#160;<span id="projectnumber">1.0</span>
    </div>
@@ -33,7 +32,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Gerado por Doxygen 1.8.11 -->
+<!-- Gerado por Doxygen 1.8.6 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 </script>
@@ -64,7 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
-      <li><a href="globals.html"><span>Membros&#160;dos&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Arquivos&#160;Membros</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -72,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Amigas</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,24 +90,85 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="title">data.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="data_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef DATA_H</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define DATA_H</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using</span> std::string;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span> </div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using</span> std::ostream; </div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;istream&gt;</span> </div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using</span> std::istream;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classData.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classData.html">Data</a>{</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span>:    </div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">int</span> dia; </div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> mes; </div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> ano; </div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classData.html#af11f741cb7f587e2e495452a8905a22a">Data</a>();</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classData.html#aab31956423290f0d62dcca47ab4d16dd">~Data</a>();</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classData.html#af11f741cb7f587e2e495452a8905a22a">Data</a>(<span class="keywordtype">int</span> dd, <span class="keywordtype">int</span> mm, <span class="keywordtype">int</span> aa);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classData.html#a72d6bfb5a3bc9a8acb1d9df70de822b7">getDia</a>();</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classData.html#ad8a045c146f1a6fdda7a276847e147bf">getMes</a>();</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classData.html#a7d2fdbe9b9944becc3386b266d65bc4d">getAno</a>();</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classData.html#a572a3cb65a9f2afc266972ba1fa4eb9f">setDia</a>(<span class="keywordtype">int</span> dd);</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classData.html#aa061f9025626bee070da2790ecfcd737">setMes</a>(<span class="keywordtype">int</span> mm);</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classData.html#a95ed2a0d66525dc1cc11561e4d609f98">setAno</a>(<span class="keywordtype">int</span> aa);</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">/*@brief Converte uma string no formato dd/mm/aaaa nos atributos da Data</span></div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">    *@param a A string que devera ser convertida */</span></div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> string2Data(<span class="keywordtype">string</span> a);</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="classData.html">Data</a>&amp; <a class="code" href="classData.html#ad31276ccfa9132cda65c51c5677f97d7">operator=</a>(<span class="keyword">const</span> <a class="code" href="classData.html">Data</a> d);</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">friend</span> ostream&amp; <a class="code" href="classData.html#ab301fcb6578b985087eb1890c949b632">operator&lt;&lt;</a>(ostream&amp; os, <a class="code" href="classData.html">Data</a> &amp;a);</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">friend</span> istream&amp; <a class="code" href="classData.html#ae62021b84f2f0c404fea914c44584593">operator&gt;&gt;</a>(istream&amp; is, <a class="code" href="classData.html">Data</a> &amp;a);</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="classData_html_ad8a045c146f1a6fdda7a276847e147bf"><div class="ttname"><a href="classData.html#ad8a045c146f1a6fdda7a276847e147bf">Data::getMes</a></div><div class="ttdeci">int getMes()</div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00038">data.cpp:38</a></div></div>
-<div class="ttc" id="classData_html_af11f741cb7f587e2e495452a8905a22a"><div class="ttname"><a href="classData.html#af11f741cb7f587e2e495452a8905a22a">Data::Data</a></div><div class="ttdeci">Data()</div><div class="ttdoc">Construtor padrao. </div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00018">data.cpp:18</a></div></div>
-<div class="ttc" id="classData_html_a7d2fdbe9b9944becc3386b266d65bc4d"><div class="ttname"><a href="classData.html#a7d2fdbe9b9944becc3386b266d65bc4d">Data::getAno</a></div><div class="ttdeci">int getAno()</div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00041">data.cpp:41</a></div></div>
-<div class="ttc" id="classData_html_ab301fcb6578b985087eb1890c949b632"><div class="ttname"><a href="classData.html#ab301fcb6578b985087eb1890c949b632">Data::operator&lt;&lt;</a></div><div class="ttdeci">friend ostream &amp; operator&lt;&lt;(ostream &amp;os, Data &amp;a)</div><div class="ttdoc">Sobrecarga do operador de insercao em stream. </div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00089">data.cpp:89</a></div></div>
-<div class="ttc" id="classData_html_a95ed2a0d66525dc1cc11561e4d609f98"><div class="ttname"><a href="classData.html#a95ed2a0d66525dc1cc11561e4d609f98">Data::setAno</a></div><div class="ttdeci">void setAno(int aa)</div><div class="ttdoc">Atualiza o ano. </div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00053">data.cpp:53</a></div></div>
-<div class="ttc" id="classData_html_aa061f9025626bee070da2790ecfcd737"><div class="ttname"><a href="classData.html#aa061f9025626bee070da2790ecfcd737">Data::setMes</a></div><div class="ttdeci">void setMes(int mm)</div><div class="ttdoc">Atualiza o mes. </div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00049">data.cpp:49</a></div></div>
-<div class="ttc" id="classData_html_aab31956423290f0d62dcca47ab4d16dd"><div class="ttname"><a href="classData.html#aab31956423290f0d62dcca47ab4d16dd">Data::~Data</a></div><div class="ttdeci">~Data()</div><div class="ttdoc">Destrutor padrao. </div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00025">data.cpp:25</a></div></div>
-<div class="ttc" id="classData_html_ad31276ccfa9132cda65c51c5677f97d7"><div class="ttname"><a href="classData.html#ad31276ccfa9132cda65c51c5677f97d7">Data::operator=</a></div><div class="ttdeci">Data &amp; operator=(const Data d)</div><div class="ttdoc">Sobrecarga do operador de atribuicao (para Data) </div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00074">data.cpp:74</a></div></div>
-<div class="ttc" id="classData_html_a72d6bfb5a3bc9a8acb1d9df70de822b7"><div class="ttname"><a href="classData.html#a72d6bfb5a3bc9a8acb1d9df70de822b7">Data::getDia</a></div><div class="ttdeci">int getDia()</div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00035">data.cpp:35</a></div></div>
-<div class="ttc" id="classData_html_ae62021b84f2f0c404fea914c44584593"><div class="ttname"><a href="classData.html#ae62021b84f2f0c404fea914c44584593">Data::operator&gt;&gt;</a></div><div class="ttdeci">friend istream &amp; operator&gt;&gt;(istream &amp;is, Data &amp;a)</div><div class="ttdoc">Sobrecarga do operador de extracao de stream. </div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00102">data.cpp:102</a></div></div>
+<a href="data_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef DATA_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DATA_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using</span> std::string;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span> </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using</span> std::ostream; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;istream&gt;</span> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using</span> std::istream;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classData.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classData.html">Data</a>{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span>:    </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">int</span> dia; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> mes; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> ano; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classData.html#af11f741cb7f587e2e495452a8905a22a">Data</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classData.html#aab31956423290f0d62dcca47ab4d16dd">~Data</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classData.html#af11f741cb7f587e2e495452a8905a22a">Data</a>(<span class="keywordtype">int</span> dd, <span class="keywordtype">int</span> mm, <span class="keywordtype">int</span> aa);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classData.html#a72d6bfb5a3bc9a8acb1d9df70de822b7">getDia</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classData.html#ad8a045c146f1a6fdda7a276847e147bf">getMes</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classData.html#a7d2fdbe9b9944becc3386b266d65bc4d">getAno</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classData.html#a572a3cb65a9f2afc266972ba1fa4eb9f">setDia</a>(<span class="keywordtype">int</span> dd);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classData.html#aa061f9025626bee070da2790ecfcd737">setMes</a>(<span class="keywordtype">int</span> mm);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classData.html#a95ed2a0d66525dc1cc11561e4d609f98">setAno</a>(<span class="keywordtype">int</span> aa);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">/*@brief Converte uma string no formato dd/mm/aaaa nos atributos da Data</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">    *@param a A string que devera ser convertida */</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> string2Data(<span class="keywordtype">string</span> a);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classData.html#a7ff2f29b038480e4a21c31f504368778">maisNdias</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classData.html#a7a692041bb503cd84ec1164a744da3fb">somarDias</a>(<span class="keywordtype">int</span> d);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classData.html">Data</a>&amp; <a class="code" href="classData.html#ad31276ccfa9132cda65c51c5677f97d7">operator=</a>(<span class="keyword">const</span> <a class="code" href="classData.html">Data</a> d);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classData.html#a11dd1712b309d14fa36e56b1762031c1">operator==</a>(<span class="keyword">const</span> <a class="code" href="classData.html">Data</a> d);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classData.html#a9a66eb2f42f813514cd381f322c9ec2b">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="classData.html">Data</a> d);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">friend</span> ostream&amp; <a class="code" href="classData.html#ab301fcb6578b985087eb1890c949b632">operator&lt;&lt;</a>(ostream&amp; os, <a class="code" href="classData.html">Data</a> &amp;a);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">friend</span> istream&amp; <a class="code" href="classData.html#ae62021b84f2f0c404fea914c44584593">operator&gt;&gt;</a>(istream&amp; is, <a class="code" href="classData.html">Data</a> &amp;a);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;};</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classData_html_a7ff2f29b038480e4a21c31f504368778"><div class="ttname"><a href="classData.html#a7ff2f29b038480e4a21c31f504368778">Data::maisNdias</a></div><div class="ttdeci">void maisNdias()</div><div class="ttdoc">Avanca N dias numa data. </div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00075">data.cpp:75</a></div></div>
+<div class="ttc" id="classData_html_ad8a045c146f1a6fdda7a276847e147bf"><div class="ttname"><a href="classData.html#ad8a045c146f1a6fdda7a276847e147bf">Data::getMes</a></div><div class="ttdeci">int getMes()</div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00042">data.cpp:42</a></div></div>
+<div class="ttc" id="classData_html_a7a692041bb503cd84ec1164a744da3fb"><div class="ttname"><a href="classData.html#a7a692041bb503cd84ec1164a744da3fb">Data::somarDias</a></div><div class="ttdeci">void somarDias(int d)</div><div class="ttdoc">Soma dias em uma data. </div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00085">data.cpp:85</a></div></div>
+<div class="ttc" id="classData_html_af11f741cb7f587e2e495452a8905a22a"><div class="ttname"><a href="classData.html#af11f741cb7f587e2e495452a8905a22a">Data::Data</a></div><div class="ttdeci">Data()</div><div class="ttdoc">Construtor padrao. </div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00022">data.cpp:22</a></div></div>
+<div class="ttc" id="classData_html_a7d2fdbe9b9944becc3386b266d65bc4d"><div class="ttname"><a href="classData.html#a7d2fdbe9b9944becc3386b266d65bc4d">Data::getAno</a></div><div class="ttdeci">int getAno()</div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00045">data.cpp:45</a></div></div>
+<div class="ttc" id="classData_html_ab301fcb6578b985087eb1890c949b632"><div class="ttname"><a href="classData.html#ab301fcb6578b985087eb1890c949b632">Data::operator&lt;&lt;</a></div><div class="ttdeci">friend ostream &amp; operator&lt;&lt;(ostream &amp;os, Data &amp;a)</div><div class="ttdoc">Sobrecarga do operador de insercao em stream. </div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00142">data.cpp:142</a></div></div>
+<div class="ttc" id="classData_html_a95ed2a0d66525dc1cc11561e4d609f98"><div class="ttname"><a href="classData.html#a95ed2a0d66525dc1cc11561e4d609f98">Data::setAno</a></div><div class="ttdeci">void setAno(int aa)</div><div class="ttdoc">Atualiza o ano. </div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00057">data.cpp:57</a></div></div>
+<div class="ttc" id="classData_html_aa061f9025626bee070da2790ecfcd737"><div class="ttname"><a href="classData.html#aa061f9025626bee070da2790ecfcd737">Data::setMes</a></div><div class="ttdeci">void setMes(int mm)</div><div class="ttdoc">Atualiza o mes. </div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00053">data.cpp:53</a></div></div>
+<div class="ttc" id="classData_html_aab31956423290f0d62dcca47ab4d16dd"><div class="ttname"><a href="classData.html#aab31956423290f0d62dcca47ab4d16dd">Data::~Data</a></div><div class="ttdeci">~Data()</div><div class="ttdoc">Destrutor padrao. </div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00029">data.cpp:29</a></div></div>
+<div class="ttc" id="classData_html_a9a66eb2f42f813514cd381f322c9ec2b"><div class="ttname"><a href="classData.html#a9a66eb2f42f813514cd381f322c9ec2b">Data::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const Data d)</div><div class="ttdoc">Sobrecarga do operador de menor que (para Data) </div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00122">data.cpp:122</a></div></div>
+<div class="ttc" id="classData_html_ad31276ccfa9132cda65c51c5677f97d7"><div class="ttname"><a href="classData.html#ad31276ccfa9132cda65c51c5677f97d7">Data::operator=</a></div><div class="ttdeci">Data &amp; operator=(const Data d)</div><div class="ttdoc">Sobrecarga do operador de atribuicao (para Data) </div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00101">data.cpp:101</a></div></div>
+<div class="ttc" id="classData_html_a72d6bfb5a3bc9a8acb1d9df70de822b7"><div class="ttname"><a href="classData.html#a72d6bfb5a3bc9a8acb1d9df70de822b7">Data::getDia</a></div><div class="ttdeci">int getDia()</div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00039">data.cpp:39</a></div></div>
+<div class="ttc" id="classData_html_ae62021b84f2f0c404fea914c44584593"><div class="ttname"><a href="classData.html#ae62021b84f2f0c404fea914c44584593">Data::operator&gt;&gt;</a></div><div class="ttdeci">friend istream &amp; operator&gt;&gt;(istream &amp;is, Data &amp;a)</div><div class="ttdoc">Sobrecarga do operador de extracao de stream. </div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00155">data.cpp:155</a></div></div>
+<div class="ttc" id="classData_html_a11dd1712b309d14fa36e56b1762031c1"><div class="ttname"><a href="classData.html#a11dd1712b309d14fa36e56b1762031c1">Data::operator==</a></div><div class="ttdeci">bool operator==(const Data d)</div><div class="ttdoc">Sobrecarga do operador de igualdade (para Data) </div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00113">data.cpp:113</a></div></div>
 <div class="ttc" id="classData_html"><div class="ttname"><a href="classData.html">Data</a></div><div class="ttdoc">Classe que representa uma Data. </div><div class="ttdef"><b>Definition:</b> <a href="data_8h_source.html#l00026">data.h:26</a></div></div>
-<div class="ttc" id="classData_html_a572a3cb65a9f2afc266972ba1fa4eb9f"><div class="ttname"><a href="classData.html#a572a3cb65a9f2afc266972ba1fa4eb9f">Data::setDia</a></div><div class="ttdeci">void setDia(int dd)</div><div class="ttdoc">Atualiza o dia. </div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00045">data.cpp:45</a></div></div>
+<div class="ttc" id="classData_html_a572a3cb65a9f2afc266972ba1fa4eb9f"><div class="ttname"><a href="classData.html#a572a3cb65a9f2afc266972ba1fa4eb9f">Data::setDia</a></div><div class="ttdeci">void setDia(int dd)</div><div class="ttdoc">Atualiza o dia. </div><div class="ttdef"><b>Definition:</b> <a href="data_8cpp_source.html#l00049">data.cpp:49</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Gerado por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.11
+</a> 1.8.6
 </small></address>
 </body>
 </html>

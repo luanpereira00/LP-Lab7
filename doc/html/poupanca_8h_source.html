@@ -3,16 +3,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.11"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>Laboratorio 7 - LP: Código-Fonte de include/poupanca.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { init_search(); });
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -22,7 +21,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+  <td style="padding-left: 0.5em;">
    <div id="projectname">Laboratorio 7 - LP
    &#160;<span id="projectnumber">1.0</span>
    </div>
@@ -33,7 +32,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Gerado por Doxygen 1.8.11 -->
+<!-- Gerado por Doxygen 1.8.6 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 </script>
@@ -64,7 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
-      <li><a href="globals.html"><span>Membros&#160;dos&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Arquivos&#160;Membros</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -72,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Amigas</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,8 +90,60 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="title">poupanca.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="poupanca_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef POUPANCA_H</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define POUPANCA_H</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="conta_8h.html">conta.h</a>&quot;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classPoupanca.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPoupanca.html">Poupanca</a> : <span class="keyword">public</span> <a class="code" href="classConta.html">Conta</a> {</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classData.html">Data</a> aniversario; </div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>: </div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classPoupanca.html#a58196421455d21b6834121e8fb0d0f76">Poupanca</a>();</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classPoupanca.html#a63efb59c345567229f79a9aa62e723b0">~Poupanca</a>();</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPoupanca.html#aa0708660abba9938735f56e0e270bab9">setAniversario</a>(<a class="code" href="classData.html">Data</a> d);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classData.html">Data</a> <a class="code" href="classPoupanca.html#a1be1cc8fea7db037d1e81b79b14684f1">getAniversario</a>();</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPoupanca.html#a8ae72589ed35fbb28e06b6917ea6ef86">setSaldo</a>(<span class="keywordtype">float</span> novo);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPoupanca.html#ad09493b223a36c09aef8903c281639ac">setTitular</a>(<span class="keywordtype">string</span> t);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classPoupanca.html#a4595983182354fb42314a0f730105bd7">getTitular</a>();</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classData.html">Data</a> <a class="code" href="classPoupanca.html#ad3ce9202b5ad8956c7d546a3f0e9e808">getData</a>();</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPoupanca.html#ae97f7ff83403b81d6a40403b3105d4c2">deposito</a>();</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPoupanca.html#aaa23bcf27f0f3fd1ad8cd1ffc3b88681">saque</a>();</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classPoupanca.html#afe964862c9dc00fc3b8d98dfda195f1a">saldo</a>();</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPoupanca.html#a37701d0ad68e4f7bfe0467a7be681895">atualiza</a>(<a class="code" href="classData.html">Data</a> *hoje);</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classPoupanca.html#aadcfbbfa28ff42bfefd4706daea9caf7">juros</a>();</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classPoupanca.html#a729e94c54ee5988749430dec6e8bc911">jurosPositivos</a>();</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classPoupanca.html#a128534c38d473cf8511ec1fdae276eb2">jurosNegativos</a>();</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPoupanca.html#a626ede2e18bc5862b95c17d956c3eb2a">setJuros</a>(<span class="keywordtype">float</span> j);</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPoupanca.html#a46cd8d7a0344443a7ab32e10b0c1e940">criar</a>();</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classPoupanca.html#a1e5aa30295a5997a54b81de77ac109d0">menu</a>(<span class="keywordtype">int</span> num);</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classPoupanca.html#a7988c4f506077ed17e8ac87e257a9a37">tipo</a>();</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif </span></div><div class="ttc" id="conta_8h_html"><div class="ttname"><a href="conta_8h.html">conta.h</a></div><div class="ttdoc">Definicao da classe Conta para representar uma conta bancaria. </div></div>
+<a href="poupanca_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef POUPANCA_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define POUPANCA_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="conta_8h.html">conta.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classPoupanca.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPoupanca.html">Poupanca</a> : <span class="keyword">public</span> <a class="code" href="classConta.html">Conta</a> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classData.html">Data</a> aniversario; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>: </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classPoupanca.html#a58196421455d21b6834121e8fb0d0f76">Poupanca</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classPoupanca.html#a63efb59c345567229f79a9aa62e723b0">~Poupanca</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPoupanca.html#aa0708660abba9938735f56e0e270bab9">setAniversario</a>(<a class="code" href="classData.html">Data</a> d);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classData.html">Data</a> <a class="code" href="classPoupanca.html#a1be1cc8fea7db037d1e81b79b14684f1">getAniversario</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPoupanca.html#a8ae72589ed35fbb28e06b6917ea6ef86">setSaldo</a>(<span class="keywordtype">float</span> novo);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPoupanca.html#ad09493b223a36c09aef8903c281639ac">setTitular</a>(<span class="keywordtype">string</span> t);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classPoupanca.html#a4595983182354fb42314a0f730105bd7">getTitular</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classData.html">Data</a> <a class="code" href="classPoupanca.html#ad3ce9202b5ad8956c7d546a3f0e9e808">getData</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPoupanca.html#ae97f7ff83403b81d6a40403b3105d4c2">deposito</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPoupanca.html#aaa23bcf27f0f3fd1ad8cd1ffc3b88681">saque</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classPoupanca.html#afe964862c9dc00fc3b8d98dfda195f1a">saldo</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPoupanca.html#a37701d0ad68e4f7bfe0467a7be681895">atualiza</a>(<a class="code" href="classData.html">Data</a> *hoje);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classPoupanca.html#aadcfbbfa28ff42bfefd4706daea9caf7">juros</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classPoupanca.html#a729e94c54ee5988749430dec6e8bc911">jurosPositivos</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classPoupanca.html#a128534c38d473cf8511ec1fdae276eb2">jurosNegativos</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPoupanca.html#a626ede2e18bc5862b95c17d956c3eb2a">setJuros</a>(<span class="keywordtype">float</span> j);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPoupanca.html#aeedd61b1449ac3f061c1b32775464d68">criar</a>(<a class="code" href="classData.html">Data</a> *hoje);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classPoupanca.html#a1e5aa30295a5997a54b81de77ac109d0">menu</a>(<span class="keywordtype">int</span> num);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classPoupanca.html#a7988c4f506077ed17e8ac87e257a9a37">tipo</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif </span></div>
+<div class="ttc" id="conta_8h_html"><div class="ttname"><a href="conta_8h.html">conta.h</a></div><div class="ttdoc">Definicao da classe Conta para representar uma conta bancaria. </div></div>
 <div class="ttc" id="classPoupanca_html_a58196421455d21b6834121e8fb0d0f76"><div class="ttname"><a href="classPoupanca.html#a58196421455d21b6834121e8fb0d0f76">Poupanca::Poupanca</a></div><div class="ttdeci">Poupanca()</div><div class="ttdoc">Construtor Padrao. </div><div class="ttdef"><b>Definition:</b> <a href="poupanca_8cpp_source.html#l00020">poupanca.cpp:20</a></div></div>
+<div class="ttc" id="classPoupanca_html_aeedd61b1449ac3f061c1b32775464d68"><div class="ttname"><a href="classPoupanca.html#aeedd61b1449ac3f061c1b32775464d68">Poupanca::criar</a></div><div class="ttdeci">void criar(Data *hoje)</div><div class="ttdoc">Cria uma nova conta poupanca. </div><div class="ttdef"><b>Definition:</b> <a href="poupanca_8cpp_source.html#l00116">poupanca.cpp:116</a></div></div>
 <div class="ttc" id="classPoupanca_html_aaa23bcf27f0f3fd1ad8cd1ffc3b88681"><div class="ttname"><a href="classPoupanca.html#aaa23bcf27f0f3fd1ad8cd1ffc3b88681">Poupanca::saque</a></div><div class="ttdeci">void saque()</div><div class="ttdoc">Realiza um saque. </div><div class="ttdef"><b>Definition:</b> <a href="poupanca_8cpp_source.html#l00047">poupanca.cpp:47</a></div></div>
 <div class="ttc" id="classPoupanca_html_ad09493b223a36c09aef8903c281639ac"><div class="ttname"><a href="classPoupanca.html#ad09493b223a36c09aef8903c281639ac">Poupanca::setTitular</a></div><div class="ttdeci">void setTitular(string t)</div><div class="ttdoc">Atualiza o titular. </div><div class="ttdef"><b>Definition:</b> <a href="poupanca_8cpp_source.html#l00155">poupanca.cpp:155</a></div></div>
 <div class="ttc" id="classPoupanca_html_a729e94c54ee5988749430dec6e8bc911"><div class="ttname"><a href="classPoupanca.html#a729e94c54ee5988749430dec6e8bc911">Poupanca::jurosPositivos</a></div><div class="ttdeci">float jurosPositivos()</div><div class="ttdef"><b>Definition:</b> <a href="poupanca_8cpp_source.html#l00083">poupanca.cpp:83</a></div></div>
@@ -102,7 +153,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="ttc" id="classPoupanca_html"><div class="ttname"><a href="classPoupanca.html">Poupanca</a></div><div class="ttdoc">Classe que representa uma conta poupanca bancaria. </div><div class="ttdef"><b>Definition:</b> <a href="poupanca_8h_source.html#l00020">poupanca.h:20</a></div></div>
 <div class="ttc" id="classPoupanca_html_a626ede2e18bc5862b95c17d956c3eb2a"><div class="ttname"><a href="classPoupanca.html#a626ede2e18bc5862b95c17d956c3eb2a">Poupanca::setJuros</a></div><div class="ttdeci">void setJuros(float j)</div><div class="ttdoc">Atualiza os juros. </div><div class="ttdef"><b>Definition:</b> <a href="poupanca_8cpp_source.html#l00072">poupanca.cpp:72</a></div></div>
 <div class="ttc" id="classPoupanca_html_a7988c4f506077ed17e8ac87e257a9a37"><div class="ttname"><a href="classPoupanca.html#a7988c4f506077ed17e8ac87e257a9a37">Poupanca::tipo</a></div><div class="ttdeci">string tipo()</div><div class="ttdoc">Retorna o tipo da conta. </div><div class="ttdef"><b>Definition:</b> <a href="poupanca_8cpp_source.html#l00149">poupanca.cpp:149</a></div></div>
-<div class="ttc" id="classPoupanca_html_a46cd8d7a0344443a7ab32e10b0c1e940"><div class="ttname"><a href="classPoupanca.html#a46cd8d7a0344443a7ab32e10b0c1e940">Poupanca::criar</a></div><div class="ttdeci">void criar()</div><div class="ttdoc">Cria uma nova conta poupanca. </div><div class="ttdef"><b>Definition:</b> <a href="poupanca_8cpp_source.html#l00116">poupanca.cpp:116</a></div></div>
 <div class="ttc" id="classPoupanca_html_a37701d0ad68e4f7bfe0467a7be681895"><div class="ttname"><a href="classPoupanca.html#a37701d0ad68e4f7bfe0467a7be681895">Poupanca::atualiza</a></div><div class="ttdeci">void atualiza(Data *hoje)</div><div class="ttdoc">Atualiza o saldo pela taxacao de juros. </div><div class="ttdef"><b>Definition:</b> <a href="poupanca_8cpp_source.html#l00094">poupanca.cpp:94</a></div></div>
 <div class="ttc" id="classPoupanca_html_aa0708660abba9938735f56e0e270bab9"><div class="ttname"><a href="classPoupanca.html#aa0708660abba9938735f56e0e270bab9">Poupanca::setAniversario</a></div><div class="ttdeci">void setAniversario(Data d)</div><div class="ttdoc">Atualiza a data de aniversario. </div><div class="ttdef"><b>Definition:</b> <a href="poupanca_8cpp_source.html#l00106">poupanca.cpp:106</a></div></div>
 <div class="ttc" id="classPoupanca_html_aadcfbbfa28ff42bfefd4706daea9caf7"><div class="ttname"><a href="classPoupanca.html#aadcfbbfa28ff42bfefd4706daea9caf7">Poupanca::juros</a></div><div class="ttdeci">float juros()</div><div class="ttdef"><b>Definition:</b> <a href="poupanca_8cpp_source.html#l00065">poupanca.cpp:65</a></div></div>
@@ -119,7 +169,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <hr class="footer"/><address class="footer"><small>
 Gerado por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.11
+</a> 1.8.6
 </small></address>
 </body>
 </html>

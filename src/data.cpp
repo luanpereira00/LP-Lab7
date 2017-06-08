@@ -7,6 +7,10 @@
  */
 
 #include <iostream>
+using std::cout;
+using std::cin;
+using std::endl;
+using std::cerr;
 using std::getline;
 
 #include <sstream> 
@@ -67,6 +71,29 @@ void Data::string2Data(string a){
 
 }
 
+/**@brief Avanca N dias numa data*/
+void Data::maisNdias(){
+	int dias2Avancar;
+	cout << "Digite quantos dias avancar: ";
+	cin >> dias2Avancar;
+
+	somarDias(dias2Avancar);
+}
+
+/**@brief Soma dias em uma data
+*@param d A quantidade de dias que devera ser somada */
+void Data::somarDias(int d){
+	dia+=d;
+	while (dia>30){
+		mes++;
+		dia-=30;
+	}
+	while (mes>12){
+		mes-=12;
+		ano++;
+	}
+}
+
 /** @brief Sobrecarga do operador de atribuicao (para Data)
 * @param	d Data que sera passada por atribuicao  
 * @return	Retorna a Data atribuida
@@ -79,6 +106,32 @@ Data& Data::operator=(const Data d) {
     return *this;
 }
 
+/** @brief Sobrecarga do operador de igualdade (para Data)
+* @param	d Data que sera testada a igualdade
+* @return	Retorna bool para a igualdade
+*/
+bool Data::operator==(const Data d) {
+	if((dia == d.dia) and (mes == d.mes) and (ano = d.ano)) return true;
+	else return false;
+}
+
+/** @brief Sobrecarga do operador de menor que (para Data)
+* @param	d Data que sera testada na desigualdade
+* @return	Retorna bool para a desigualdade
+*/
+bool Data::operator<(const Data d) {
+	if(ano<d.ano) return true;
+	else if (ano>d.ano) return false;
+	else{
+		if(mes<d.mes) return true;
+		else if (mes>d.mes) return false;
+		else{
+			if(dia<d.dia) return true;
+			else if (dia>d.dia) return false;
+			else return false;
+		}
+	}
+}
 
 /** @brief Sobrecarga do operador de insercao em stream 
 * @details O operador eh sobrecarregado para representar uma Data na formatacao "dd/mm/aaaa"  

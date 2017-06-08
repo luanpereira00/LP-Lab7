@@ -12,5 +12,6 @@ var searchData=
   ['setsaldo',['setSaldo',['../classContaCorrente.html#acc06f6747dd232ac2b9c0203fef4b85a',1,'ContaCorrente::setSaldo()'],['../classPoupanca.html#a8ae72589ed35fbb28e06b6917ea6ef86',1,'Poupanca::setSaldo()']]],
   ['settitular',['setTitular',['../classContaCorrente.html#a88ae32d38d0e52b3d9c9a5e32d80dbb8',1,'ContaCorrente::setTitular()'],['../classPoupanca.html#ad09493b223a36c09aef8903c281639ac',1,'Poupanca::setTitular()']]],
   ['solverpn',['solveRPN',['../templateSTL_8h.html#a4d1cf507b2d64e9ebc9ec73d334ff5a5',1,'templateSTL.h']]],
+  ['somardias',['somarDias',['../classData.html#a7a692041bb503cd84ec1164a744da3fb',1,'Data']]],
   ['square',['square',['../q5_8cpp.html#ad159251d7aa3f060f6b2a5439c93e845',1,'q5.cpp']]]
 ];

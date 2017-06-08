@@ -29,6 +29,8 @@ int main (){
 	Data aux;
 	Data hoje(7, 6, 2017);
 
+	cout << "Digite a data de hoje (dd/mm/aaaa): " << endl;
+	cin >> hoje;
 	
 	do{
 		do{
@@ -53,14 +55,14 @@ int main (){
 			case 1: // criar	
 				
 				delete pp;
-				cc->criar();
+				cc->criar(&hoje);
 				v.push_back(cc);
 				cout << "Conta corrente criada com sucesso!" << endl;
 			break;
 			case 2: // criar
 				
 				delete cc;		
-				pp->criar();
+				pp->criar(&hoje);
 				v.push_back(pp);
 				cout << "Conta poupanca criada com sucesso!" << endl;
 			break;
@@ -125,9 +127,9 @@ int main (){
 			break;
 			case 6:
 				cout << "=================================" << endl;
-				cout << "--- Atualizando Data ---" << endl;
-				cout << "Digite a nova data (dd/mm/aaaa): ";
-				cin >> hoje;
+				cout << "--- Avancando Data ---" << endl;
+				hoje.maisNdias();
+
 				it = v.begin();
 				while(it!=v.end()){
 					(*it)->atualiza(&hoje);

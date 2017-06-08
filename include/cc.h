@@ -73,7 +73,7 @@ public:
 	float juros();
 
 	/** @brief Cria uma nova conta corrente */
-	void criar();
+	void criar(Data *hoje);
 
 	/** @brief Menu para acoes do usuario */
 	int menu(int num);

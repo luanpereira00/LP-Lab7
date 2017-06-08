@@ -53,7 +53,7 @@ void ContaCorrente::saque(){
 	cout << "Digite o valor do saque: ";
 	cin >> valor;
 
-	if(valor>0 and (saldoConta-valor)>limite) {
+	if(valor>0 and (saldoConta-valor)>=limite) {
 		saldoConta-=valor;
 	} else cerr << "IMPOSSIVEL REALIZAR SAQUE!" << endl;
 }
@@ -88,11 +88,11 @@ void ContaCorrente::setSaldo(float novo){
 /** @brief Atualiza o saldo pela taxacao de juros
 	*@param hoje A data de hoje */
 void ContaCorrente::atualiza(Data *hoje){
-	if(diaAtualizar.getDia()!=hoje->getDia() or diaAtualizar.getMes()!=hoje->getMes() or diaAtualizar.getAno()!=hoje->getAno()){
-		diaAtualizar = *hoje;
+	while(diaAtualizar<*hoje or diaAtualizar==*hoje){
+		diaAtualizar.somarDias(1);
 		
 		setSaldo(saldo()+saldo()*juros());
-		cout << "Saldo com Juros aplicados: " << saldo() << endl;
+		cout << "Saldo de "<< getTitular() << " atualizado apos aplicacao de juros: " << saldo() << endl;
 	}
 }
 
@@ -108,7 +108,9 @@ int ContaCorrente::getLimite(){
 }
 
 /** @brief Cria uma nova conta corrente */
-void ContaCorrente::criar(){
+void ContaCorrente::criar(Data *hoje){
+	diaAtualizar = *hoje;
+	diaAtualizar.somarDias(1);
 	cout << "=================================" << endl;
 	cout << "--- Criando Conta Corrente ---" << endl;	
 	cout << "Digite o nome do titular: ";

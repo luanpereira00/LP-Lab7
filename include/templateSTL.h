@@ -15,6 +15,7 @@ using std::endl;
 
 #include <string>
 using std::string;
+using std::to_string;
 
 #include <numeric>
 using std::accumulate;
@@ -76,7 +77,7 @@ template<typename TContainer>
 *	@brief Funcao que imprime os elementos de um container
 *  	@param collection O container 
 *	@param label Uma informacao para a impressao, vazia por default
-*	@param separetor Um simbolo para separar os elementos do container, espaço eh definido por default
+*	@param separator Um simbolo para separar os elementos do container, espaço eh definido por default
 *	@return Sem tipo de retorno 
 */
 void print_elements(const TContainer& collection, const char* label="",  const char separator=' '){
@@ -98,49 +99,62 @@ int solveRPN(const TContainer collection){
 	TContainer *ted = const_cast<TContainer*>(&collection);
 	TContainer pilha;
 	int op1, op2; 
-	string aux;
+	string aux="", operandos;
 	string opr;
+	//cout << "ted->empty" << endl;
 	while(!ted->empty()){
 		pilha.push(ted->top());
-
 		ted->pop();
 	}
-
-
-	//cout << pilha.top() << endl;
 	
-	aux = pilha.top();
-
-	op1=atoi(aux.c_str());
-	
-	pilha.pop();
-	
-	bool flag=true;
-	int result=0;
 	while(!pilha.empty()){
-		if(!flag) op1=result;
-		cout << "OP1 = " << op1 << endl;
-		flag=false;
-		
 		aux = pilha.top();
-		op2=atoi(aux.c_str());
-		cout << "OP2 = " <<op2 << endl;
 		pilha.pop();
 		
-		opr = pilha.top();
-		cout << "OPR = " << opr << endl;
-		pilha.pop();
+		if(aux=="+") {
+			operandos = ted->top();
+			ted->pop();
+			op2=atoi(operandos.c_str());
+			
+			operandos = ted->top();
+			ted->pop();
+			op1=atoi(operandos.c_str());
+			cout << op1 << " + " << op2 << endl;
+			ted->push(to_string(op1+op2));
+		}else if(aux=="-") {
+			operandos = ted->top();
+			ted->pop();
+			op2=atoi(operandos.c_str());
+			operandos = ted->top();
+			ted->pop();
+			op1=atoi(operandos.c_str());
+			cout << op1 << " - " << op2 << endl;
+			ted->push(to_string(op1-op2));
+		}else if(aux=="*"){
+			operandos = ted->top();
+			ted->pop();
+			op2=atoi(operandos.c_str());
+			operandos = ted->top();
+			ted->pop();
+			op1=atoi(operandos.c_str());
+			cout << op1 << " * " << op2 << endl;
+			ted->push(to_string(op1*op2));
+		} else if(aux=="/"){
+			operandos = ted->top();
+			ted->pop();
+			op2=atoi(operandos.c_str());
+			operandos = ted->top();
+			ted->pop();
+			op1=atoi(operandos.c_str());
+		cout << op1 << " / " << op2 << endl;
+			ted->push(to_string(op1/op2));
+		} else {
+			ted->push(aux);	
+		}
 
-		cout << "-> " << op1 << opr << op2;
-
-		if(opr=="+") result = op1+op2;
-		if(opr=="-") result = op1-op2;
-		if(opr=="*") result = op1*op2;
-		if(opr=="/") result = op1/op2;
-
-		cout << " = " << result << endl << endl;
-	}
-	return result;
-	
+	}	
+	aux = ted->top();
+	ted->pop();
+	return atoi(aux.c_str());
 }
 #endif

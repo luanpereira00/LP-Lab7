@@ -47,7 +47,6 @@ public:
 	/**@return Retorna o ano*/
 	int getAno();
 
-
 	/**@brief Atualiza o dia
 	*@param dd O novo dia*/
 	void setDia(int dd);
@@ -64,11 +63,30 @@ public:
 	*@param a A string que devera ser convertida */
 	void string2Data(string a);
 
+	/**@brief Avanca N dias numa data*/
+	void maisNdias();
+
+	/**@brief Soma dias em uma data
+	*@param d A quantidade de dias que devera ser somada */
+	void somarDias(int d);
+
 	/** @brief Sobrecarga do operador de atribuicao (para Data)
 	* @param	d Data que sera passada por atribuicao  
 	* @return	Retorna a Data atribuida
 	*/
 	Data& operator=(const Data d);
+
+	/** @brief Sobrecarga do operador de igualdade (para Data)
+	* @param	d Data que sera testada a igualdade
+	* @return	Retorna bool para a igualdade
+	*/
+	bool operator==(const Data d);
+
+	/** @brief Sobrecarga do operador de menor que (para Data)
+	* @param	d Data que sera testada na desigualdade
+	* @return	Retorna bool para a desigualdade
+	*/
+	bool operator<(const Data d);
 
 	/** @brief Sobrecarga do operador de insercao em stream 
 	* @details O operador eh sobrecarregado para representar uma Data na formatacao "dd/mm/aaaa"  

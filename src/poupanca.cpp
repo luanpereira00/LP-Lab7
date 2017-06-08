@@ -92,12 +92,12 @@ float Poupanca::jurosNegativos(){
 /** @brief Atualiza o saldo pela taxacao de juros
 	*@param hoje A data de hoje */
 void Poupanca::atualiza(Data *hoje){
-	if(aniversario.getDia()==hoje->getDia() and aniversario.getMes()==hoje->getMes() and aniversario.getAno()==hoje->getAno()){
-		aniversario.setAno(aniversario.getAno()+1);
+	while(aniversario<*hoje or aniversario==*hoje){		
+		aniversario.somarDias(365);
 		cout << "=================================" << endl;
 		cout << "--- Aplicando Juros ---" << endl;
 		setSaldo(saldo()+saldo()*juros());
-		cout << "Juros aplicados: " << saldo() << endl;
+		cout << "Saldo de "<< getTitular() << " atualizado apos aplicacao de juros: " << saldo() << endl;
 	} 
 }
 
@@ -113,17 +113,17 @@ Data Poupanca::getAniversario(){
 }
 
 /** @brief Cria uma nova conta poupanca */
-void Poupanca::criar(){	
-		cout << "=================================" << endl;
-		cout << "--- Criando Conta Poupanca ---" << endl;
-		cout << "Digite o nome do titular: ";
-		cin.ignore();
-		getline(cin, titular);
-		cout << "Digite a data de aniversario da poupanca (dd/mm/aaaa): ";
-		cin >> aniversario;
-		do{
-			cout << "Digite a taxa dos seus juros [0, 1]: ";
-			cin >> jurosPosit;
+void Poupanca::criar(Data *hoje){	
+	aniversario = *hoje;
+	aniversario.somarDias(365);
+	cout << "=================================" << endl;
+	cout << "--- Criando Conta Poupanca ---" << endl;
+	cout << "Digite o nome do titular: ";
+	cin.ignore();
+	getline(cin, titular);
+	do{
+		cout << "Digite a taxa dos seus juros [0, 1]: ";
+		cin >> jurosPosit;
 		if(jurosPosit<0 or jurosPosit>1) cerr << "IMPOSSIVEL TER TAXA DE JUROS FORA DO INTERVALO [0, 1]!" << endl;
 	}while(jurosPosit<0 or jurosPosit>1);
 }
