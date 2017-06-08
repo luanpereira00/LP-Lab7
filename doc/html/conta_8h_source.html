@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Laboratorio 7 - LP: Código-Fonte de include/conta.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Laboratorio 7 - LP
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Resolucoes do Lab7 de LP</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Membros&#160;dos&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">conta.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="conta_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef BANCO_H</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define BANCO_H</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using</span> std::string;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="data_8h.html">data.h</a>&quot;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classConta.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classConta.html">Conta</a> {</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">protected</span>:</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classConta.html#a578f363574c62880979b9d371bd5c12c">   25</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classConta.html#a578f363574c62880979b9d371bd5c12c">titular</a>; </div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classConta.html#a2e20a9795e93c509abcd07971e833dd8">   26</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classConta.html#a2e20a9795e93c509abcd07971e833dd8">jurosNegat</a>; </div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classConta.html#acf19e17ca9a121a56d273baf48786873">   27</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classConta.html#acf19e17ca9a121a56d273baf48786873">jurosPosit</a>; </div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classConta.html#a4e66001f0f350f09d1d5f122cb123992">   28</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classConta.html#a4e66001f0f350f09d1d5f122cb123992">saldoConta</a>; </div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classConta.html#a62ce60677e747a026d1ef25e41f94fb0">   32</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classConta.html#a62ce60677e747a026d1ef25e41f94fb0">~Conta</a>(){</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">//NADA</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    };</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classData.html">Data</a> <a class="code" href="classConta.html#a839ff2cf1e0c9a947651a6b26d6cb284">getData</a>()=0;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code" href="classConta.html#a9c127785ab253d884123ab384af396bf">getTitular</a>()=0;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classConta.html#ae4bf8e80a1eaba5b07bcb510ff2b35bd">deposito</a>()=0;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classConta.html#ac5c2510071b3f355a43035b24daf185e">saque</a>()=0;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="classConta.html#a1cf037d002cf6cd5082a92284b31a6ca">saldo</a>()=0;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="classConta.html#a49e2b343c27839d5b7db5e7e675d106a">jurosPositivos</a>()=0;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="classConta.html#a6b875df61125c8646e0497e08f6eec7e">jurosNegativos</a>()=0;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classConta.html#a6792c1c88682e6e97e516e8372bdfef9">atualiza</a>(<a class="code" href="classData.html">Data</a> *hoje)=0;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="classConta.html#ac50f2c55556f9ea7e6d3fd1f8a6ae413">juros</a>()=0;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classConta.html#ab39bccd5f9f7a7fe91e5fda4e466e5fb">menu</a>(<span class="keywordtype">int</span> num)=0;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code" href="classConta.html#ad01e5a42373a39e730c805fa53fb64aa">tipo</a>()=0;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="classConta_html_a578f363574c62880979b9d371bd5c12c"><div class="ttname"><a href="classConta.html#a578f363574c62880979b9d371bd5c12c">Conta::titular</a></div><div class="ttdeci">string titular</div><div class="ttdef"><b>Definition:</b> <a href="conta_8h_source.html#l00025">conta.h:25</a></div></div>
+<div class="ttc" id="classConta_html_ac5c2510071b3f355a43035b24daf185e"><div class="ttname"><a href="classConta.html#ac5c2510071b3f355a43035b24daf185e">Conta::saque</a></div><div class="ttdeci">virtual void saque()=0</div><div class="ttdoc">Realiza um saque na conta. </div></div>
+<div class="ttc" id="classConta_html_ad01e5a42373a39e730c805fa53fb64aa"><div class="ttname"><a href="classConta.html#ad01e5a42373a39e730c805fa53fb64aa">Conta::tipo</a></div><div class="ttdeci">virtual string tipo()=0</div></div>
+<div class="ttc" id="data_8h_html"><div class="ttname"><a href="data_8h.html">data.h</a></div><div class="ttdoc">Definicao da classe Data para representar uma data no estilo DD/MM/AAAA. </div></div>
+<div class="ttc" id="classConta_html_a49e2b343c27839d5b7db5e7e675d106a"><div class="ttname"><a href="classConta.html#a49e2b343c27839d5b7db5e7e675d106a">Conta::jurosPositivos</a></div><div class="ttdeci">virtual float jurosPositivos()=0</div></div>
+<div class="ttc" id="classConta_html_a2e20a9795e93c509abcd07971e833dd8"><div class="ttname"><a href="classConta.html#a2e20a9795e93c509abcd07971e833dd8">Conta::jurosNegat</a></div><div class="ttdeci">float jurosNegat</div><div class="ttdef"><b>Definition:</b> <a href="conta_8h_source.html#l00026">conta.h:26</a></div></div>
+<div class="ttc" id="classConta_html_ab39bccd5f9f7a7fe91e5fda4e466e5fb"><div class="ttname"><a href="classConta.html#ab39bccd5f9f7a7fe91e5fda4e466e5fb">Conta::menu</a></div><div class="ttdeci">virtual int menu(int num)=0</div><div class="ttdoc">Menu para escolhas de acao do usuario. </div></div>
+<div class="ttc" id="classConta_html_a6b875df61125c8646e0497e08f6eec7e"><div class="ttname"><a href="classConta.html#a6b875df61125c8646e0497e08f6eec7e">Conta::jurosNegativos</a></div><div class="ttdeci">virtual float jurosNegativos()=0</div></div>
+<div class="ttc" id="classConta_html_a62ce60677e747a026d1ef25e41f94fb0"><div class="ttname"><a href="classConta.html#a62ce60677e747a026d1ef25e41f94fb0">Conta::~Conta</a></div><div class="ttdeci">virtual ~Conta()</div><div class="ttdoc">Destrutor padrao. </div><div class="ttdef"><b>Definition:</b> <a href="conta_8h_source.html#l00032">conta.h:32</a></div></div>
+<div class="ttc" id="classConta_html_a1cf037d002cf6cd5082a92284b31a6ca"><div class="ttname"><a href="classConta.html#a1cf037d002cf6cd5082a92284b31a6ca">Conta::saldo</a></div><div class="ttdeci">virtual float saldo()=0</div></div>
+<div class="ttc" id="classConta_html"><div class="ttname"><a href="classConta.html">Conta</a></div><div class="ttdoc">Classe que representa uma conta bancaria. </div><div class="ttdef"><b>Definition:</b> <a href="conta_8h_source.html#l00023">conta.h:23</a></div></div>
+<div class="ttc" id="classConta_html_a9c127785ab253d884123ab384af396bf"><div class="ttname"><a href="classConta.html#a9c127785ab253d884123ab384af396bf">Conta::getTitular</a></div><div class="ttdeci">virtual string getTitular()=0</div></div>
+<div class="ttc" id="classConta_html_a4e66001f0f350f09d1d5f122cb123992"><div class="ttname"><a href="classConta.html#a4e66001f0f350f09d1d5f122cb123992">Conta::saldoConta</a></div><div class="ttdeci">float saldoConta</div><div class="ttdef"><b>Definition:</b> <a href="conta_8h_source.html#l00028">conta.h:28</a></div></div>
+<div class="ttc" id="classConta_html_ae4bf8e80a1eaba5b07bcb510ff2b35bd"><div class="ttname"><a href="classConta.html#ae4bf8e80a1eaba5b07bcb510ff2b35bd">Conta::deposito</a></div><div class="ttdeci">virtual void deposito()=0</div><div class="ttdoc">Realiza um deposito na conta. </div></div>
+<div class="ttc" id="classConta_html_a6792c1c88682e6e97e516e8372bdfef9"><div class="ttname"><a href="classConta.html#a6792c1c88682e6e97e516e8372bdfef9">Conta::atualiza</a></div><div class="ttdeci">virtual void atualiza(Data *hoje)=0</div><div class="ttdoc">Atualiza os juros de acordo com a data. </div></div>
+<div class="ttc" id="classConta_html_acf19e17ca9a121a56d273baf48786873"><div class="ttname"><a href="classConta.html#acf19e17ca9a121a56d273baf48786873">Conta::jurosPosit</a></div><div class="ttdeci">float jurosPosit</div><div class="ttdef"><b>Definition:</b> <a href="conta_8h_source.html#l00027">conta.h:27</a></div></div>
+<div class="ttc" id="classData_html"><div class="ttname"><a href="classData.html">Data</a></div><div class="ttdoc">Classe que representa uma Data. </div><div class="ttdef"><b>Definition:</b> <a href="data_8h_source.html#l00026">data.h:26</a></div></div>
+<div class="ttc" id="classConta_html_a839ff2cf1e0c9a947651a6b26d6cb284"><div class="ttname"><a href="classConta.html#a839ff2cf1e0c9a947651a6b26d6cb284">Conta::getData</a></div><div class="ttdeci">virtual Data getData()=0</div></div>
+<div class="ttc" id="classConta_html_ac50f2c55556f9ea7e6d3fd1f8a6ae413"><div class="ttname"><a href="classConta.html#ac50f2c55556f9ea7e6d3fd1f8a6ae413">Conta::juros</a></div><div class="ttdeci">virtual float juros()=0</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

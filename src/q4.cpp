@@ -20,49 +20,54 @@ using std::find_if;
 using std::string;
 using std::to_string;
 
-#include <set> 
-using std::set; 
+#include <set>
+using std::set;
  
 #include "templateSTL.h"
 
 /** @brief Funcao que verifica se um numero eh primo 
-*	@param i O numero que sera vericado
+*	@param num O numero que sera vericado
 *	@return Retorna bool para o numero ser primo
 */
-bool isPrime(int i){
-	int j=2;
-	while(j<=i/2){
-		if(i%j==0) return false;
-		j++;
+bool isPrime(int num){
+	if(num<=1) return false;
+	else if(num == 2) return true;
+	else if(num%2==0) return false;
+	else{
+		int divisor = 3;
+		while(divisor<num){
+			if(num%divisor==0) return false;
+
+			divisor+=2;
+		}
 	}
 	return true;
+
 }
 
 /** @brief Funcao principal */
 int main(int argc, char** argv) {    
 	vector<int> v;
-	set<int> y;
 	string aux;
-	int n = 0, i=2;
-
+	int n = 0, i=2, num;
+	set<int> primos;
 	aux = argv[1];
 
-	cout << aux << endl;
+	//cout << aux << endl;
 
 	n = atoi(aux.c_str());
 
-	while(i<n) {
+	while(i<=n) {
 		v.push_back(i);
 		i++;
 	}   
-
 	//print_elements(v);
-	auto it = v.begin();
-	while(it!=v.end()){
-		y.insert(*(find_if(it, v.end(), isPrime)));
-		it++;
+
+	for(auto it = v.begin(); it < v.end(); it++){
+		num = *find_if(it, v.end(), isPrime);
+		if(num>=2) primos.insert(num);
 	}  
 	aux = "Numeros primos [1-"+to_string(n)+"]:";
-	print_elements(y, aux.c_str());
+	print_elements(primos, aux.c_str());
 	return 0; 
 }

@@ -35,9 +35,9 @@ CFLAGS=-Wall -pedantic -ansi -std=c++11 -I. -I$(INC_DIR)
 
 # Define o alvo (target) para a compilacao completa.
 # Ao final da compilacao, remove os arquivos objeto.
-all: init q1 q2 q3 q4 q6
+all: init q1 q2 q3 q4 q5 q6
 debug: CFLAGS += -g -O0
-debug: init q1 q2 q3 q4 q6
+debug: init q1 q2 q3 q4 q5 q6
 
 init:
 	@mkdir -p $(BIN_DIR)/
@@ -102,6 +102,21 @@ q4: $(OBJ_DIR)/q4.o
 # Define os arquivos q3.cpp e templateSTL.h como dependencias.
 $(OBJ_DIR)/q4.o: $(SRC_DIR)/q4.cpp $(INC_DIR)/templateSTL.h 
 	$(CC) -c $(CFLAGS) -o $@ $<	
+
+# Alvo (target) para a construcao do executavel
+# Define o arquivo q5.o como dependencia
+q5: $(OBJ_DIR)/q5.o 
+	@echo "============="
+	@echo "Ligando o alvo $@"
+	@echo "============="
+	$(CC) $(CFLAGS) -o $(BIN_DIR)/$@ $^
+	@echo "+++ [Executavel 'q5' criado em $(BIN_DIR)] +++"
+	@echo "============="
+
+# Alvo (target) para a construcao do objeto q4.o
+# Define os arquivos q3.cpp e templateSTL.h como dependencias.
+$(OBJ_DIR)/q5.o: $(SRC_DIR)/q5.cpp 
+	$(CC) -c $(CFLAGS) -o $@ $<		
 
 # Alvo (target) para a construcao do executavel
 # Define o arquivo q6.o como dependencia

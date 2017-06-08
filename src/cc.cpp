@@ -1,3 +1,11 @@
+/**
+ * @file	cc.cpp
+ * @brief	Implementacao da classe ContaCorrente
+ * @author	Luan Pereira (luanpereira00@outlook.com)
+ * @since	01/06/2017
+ * @date	01/06/2017
+ */
+
 #include <iostream>
 using std::cout;
 using std::cin;
@@ -8,6 +16,7 @@ using std::endl;
 #include "conta.h"
 #include "cc.h"
 
+/** @brief Construtor Padrao */
 ContaCorrente::ContaCorrente(){
 	saldoConta = 0;
 	Data d(8, 6, 2017);
@@ -16,12 +25,14 @@ ContaCorrente::ContaCorrente(){
 	jurosPosit=0;
 }
 
+/** @brief Destrutor Padrao */
 ContaCorrente::~ContaCorrente(){
 	saldoConta = 0;
 	jurosNegat = 0;
 	jurosPosit = 0;
 }
 
+/** @brief Realiza um deposito*/
 void ContaCorrente::deposito(){
 	float valor;
 	cout << "=================================" << endl;
@@ -33,6 +44,8 @@ void ContaCorrente::deposito(){
 		saldoConta+=valor;
 	} else cerr << "IMPOSSIVEL DEPOSITAR VALORES NEGATIVOS!" << endl;
 }
+
+/** @brief Realiza um saque*/
 void ContaCorrente::saque(){
 	float valor;
 	cout << "=================================" << endl;
@@ -44,48 +57,57 @@ void ContaCorrente::saque(){
 		saldoConta-=valor;
 	} else cerr << "IMPOSSIVEL REALIZAR SAQUE!" << endl;
 }
+
+/** @return Retorna o saldo*/
 float ContaCorrente::saldo(){
 	return saldoConta;
 }
 
+/** @return Retorna a taxacao de juros  */
 float ContaCorrente::juros(){
 	if(saldo()>=0) return jurosPositivos();
 	else return jurosNegativos();
 }
 
+/** @return Retorna o juros positivo  */
 float ContaCorrente::jurosPositivos(){
 	return jurosPosit;
 }
+
+/** @return Retorna o juros negativo */
 float ContaCorrente::jurosNegativos(){
 	return jurosNegat;
 }
 
+/** @brief Atualiza o saldo 
+	*@param novo O novo saldo*/
 void ContaCorrente::setSaldo(float novo){
 	saldoConta = novo;
 }
 
+/** @brief Atualiza o saldo pela taxacao de juros
+	*@param hoje A data de hoje */
 void ContaCorrente::atualiza(Data *hoje){
-	if(diaAtualizar.getDia()==hoje->getDia() and diaAtualizar.getMes()==hoje->getMes() and diaAtualizar.getAno()==hoje->getAno()){
-		diaAtualizar.setDia(diaAtualizar.getDia()+1);
-		if(diaAtualizar.getDia()>31){
-			diaAtualizar.setDia(diaAtualizar.getDia()-31);
-			diaAtualizar.setMes(diaAtualizar.getMes()+1);
-			if(diaAtualizar.getMes()>12){
-				diaAtualizar.setMes(diaAtualizar.getMes()-12);
-				diaAtualizar.setAno(diaAtualizar.getAno()+1);
-			}
-		}
+	if(diaAtualizar.getDia()!=hoje->getDia() or diaAtualizar.getMes()!=hoje->getMes() or diaAtualizar.getAno()!=hoje->getAno()){
+		diaAtualizar = *hoje;
+		
 		setSaldo(saldo()+saldo()*juros());
 		cout << "Saldo com Juros aplicados: " << saldo() << endl;
 	}
 }
+
+/** @brief  Atualiza o limite
+	*@param l O novo limite */
 void ContaCorrente::setLimite(int l){
 	limite = l;
 }
+
+/** @return Retorna o limite  */
 int ContaCorrente::getLimite(){
 	return limite;
 }
 
+/** @brief Cria uma nova conta corrente */
 void ContaCorrente::criar(){
 	cout << "=================================" << endl;
 	cout << "--- Criando Conta Corrente ---" << endl;	
@@ -104,6 +126,7 @@ void ContaCorrente::criar(){
 	}while(jurosNegat<0 or jurosNegat>1);
 }
 
+/** @brief Menu para acoes do usuario */
 int ContaCorrente::menu(int num){
 	int result=0;
 	do{
@@ -120,10 +143,17 @@ int ContaCorrente::menu(int num){
 	return result;
 }
 
+/** @brief Retorna o tipo da conta */
 string ContaCorrente::tipo(){
 	return "Conta Corrente";
 }
 
+/** @brief  Atualiza o titular 
+	*@param t O novo titular*/
 void ContaCorrente::setTitular(string t){ titular = t; }
+
+/** @return Retorna o titular  */
 string ContaCorrente::getTitular() {return titular; }
+
+/** @return Retorna a data para atualizar  */
 Data ContaCorrente::getData(){ return diaAtualizar; }

@@ -1,0 +1,2 @@
+Nesta questão, usa-se os elementos da STL para criar um vetor de inteiros entre 1 e 9 (incluídos), calcular e exibir seus quadrados. 
+Utiliza-se, para tanto, dois containers da classe vector ("col" e "col2"). Adiciona-se a "col" o valores de 1 até 9. Calcula-se os valores dos quadrados de "col" usando os artifícios std::transform e função square passando os resultados para o "col2". Ao fim, exibe-se os valores de "col2".

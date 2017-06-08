@@ -1,3 +1,11 @@
+/**
+ * @file	poupanca.cpp
+ * @brief	Implementacao da classe Poupanca
+ * @author	Luan Pereira (luanpereira00@outlook.com)
+ * @since	01/06/2017
+ * @date	01/06/2017
+ */
+
 #include <iostream>
 using std::cout;
 using std::cin;
@@ -8,18 +16,21 @@ using std::endl;
 #include "conta.h"
 #include "poupanca.h"
 
+/** @brief Construtor Padrao */
 Poupanca::Poupanca(){
 	saldoConta = 0;
 	jurosNegat=0;
 	jurosPosit=0;
 }
 
+/** @brief Destrutor Padrao */
 Poupanca::~Poupanca(){
 	saldoConta = 0;
 	jurosNegat=0;
 	jurosPosit=0;
 }
 
+/** @brief Realiza um deposito*/
 void Poupanca::deposito(){
 	float valor;
 	cout << "=================================" << endl;
@@ -31,6 +42,8 @@ void Poupanca::deposito(){
 		saldoConta+=valor;
 	} else cerr << "IMPOSSIVEL DEPOSITAR VALORES NAO POSITIVOS!" << endl;
 }
+
+/** @brief Realiza um saque*/
 void Poupanca::saque(){
 	cout << "=================================" << endl;
 	cout << "--- Saque ---" << endl;
@@ -42,28 +55,42 @@ void Poupanca::saque(){
 		saldoConta-=valor;
 	} else cerr << "IMPOSSIVEL REALIZAR SAQUE!" << endl;
 }
+
+/** @return Retorna o saldo*/
 float Poupanca::saldo(){
 	return saldoConta;
 }
 
+/** @return Retorna a taxacao de juros  */
 float Poupanca::juros(){
 	if(saldo()>=0) return jurosPositivos();
 	else return jurosNegativos();
 }
+
+/** @brief Atualiza os juros 
+	*@param j O novo juros */
 void Poupanca::setJuros(float j){
 	jurosPosit = j;
 }
 
+/** @brief Atualiza o saldo 
+	*@param novo O novo saldo*/
 void Poupanca::setSaldo(float novo){
 	saldoConta = novo;
 }
 
+/** @return Retorna o juros positivo  */
 float Poupanca::jurosPositivos(){
 	return jurosPosit;
 }
+
+/** @return Retorna o juros negativo */
 float Poupanca::jurosNegativos(){
 	return jurosNegat;
 }
+
+/** @brief Atualiza o saldo pela taxacao de juros
+	*@param hoje A data de hoje */
 void Poupanca::atualiza(Data *hoje){
 	if(aniversario.getDia()==hoje->getDia() and aniversario.getMes()==hoje->getMes() and aniversario.getAno()==hoje->getAno()){
 		aniversario.setAno(aniversario.getAno()+1);
@@ -73,13 +100,19 @@ void Poupanca::atualiza(Data *hoje){
 		cout << "Juros aplicados: " << saldo() << endl;
 	} 
 }
+
+/**@brief Atualiza a data de aniversario 
+	*@param d A nova data de aniversario*/
 void Poupanca::setAniversario(Data d){
 	aniversario = d;
 }
+
+/**@return Retorna a data de aniversario*/
 Data Poupanca::getAniversario(){
 	return aniversario;
 }
 
+/** @brief Cria uma nova conta poupanca */
 void Poupanca::criar(){	
 		cout << "=================================" << endl;
 		cout << "--- Criando Conta Poupanca ---" << endl;
@@ -95,6 +128,7 @@ void Poupanca::criar(){
 	}while(jurosPosit<0 or jurosPosit>1);
 }
 
+/** @brief Menu para acoes do usuario */
 int Poupanca::menu(int num){
 	int result=0;
 	do{
@@ -111,11 +145,17 @@ int Poupanca::menu(int num){
 	return result;
 }
 
-
+/** @brief Retorna o tipo da conta */
 string Poupanca::tipo(){
 	return "Conta Poupanca";
 }
 
+/** @brief  Atualiza o titular 
+	*@param t O novo titular*/
 void Poupanca::setTitular(string t){ titular = t; }
+
+/** @return Retorna o titular  */
 string Poupanca::getTitular() { return titular; }
+
+/** @return Retorna a data para atualizar  */
 Data Poupanca::getData(){ return aniversario; }

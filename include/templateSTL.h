@@ -81,7 +81,7 @@ template<typename TContainer>
 */
 void print_elements(const TContainer& collection, const char* label="",  const char separator=' '){
 	cout << label << " ";
-	for(typename TContainer::iterator it = collection.begin(); it!=collection.end(); ++it){
+	for(auto it = collection.begin(); it!=collection.end(); ++it){
 		cout << *it << separator;
 	}
 	cout << endl;
