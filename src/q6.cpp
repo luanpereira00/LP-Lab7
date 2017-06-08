@@ -26,23 +26,29 @@ int main (){
 	vector<Conta*> v;
 	vector<Conta*>::iterator it;
 	uint num;
+	Data aux;
+	Data hoje(7, 6, 2017);
+
 	
 	do{
 		do{
 			cout << "=================================" << endl;
+			cout << "\t\tHoje: " << hoje << endl;
 			cout << "--- Conta ---" << endl;
 			cout << "1 - Criar Conta Corrente"<< endl;
 			cout << "2 - Criar Conta Poupanca"<< endl;
 			cout << "3 - Listar Contas" << endl;
 			cout << "4 - Remover Conta" << endl;
 			cout << "5 - Acessar Conta" << endl;
+			cout << "6 - Avancar Data" << endl;
 			cout << "0 - Sair" << endl;
 			cout << "Opcao: ";
 			cin >> total;
-			if(total<0 or total>5) cerr << "ERRO! OPCAO INVALIDA..." << endl;
-		}while(total<0 or total>5);
+			if(total<0 or total>6) cerr << "ERRO! OPCAO INVALIDA..." << endl;
+		}while(total<0 or total>6);
 		ContaCorrente *cc = new ContaCorrente;
 		Poupanca *pp = new Poupanca;
+
 		switch(total){
 			case 1: // criar	
 				
@@ -64,7 +70,7 @@ int main (){
 				cout << "=================================" << endl;
 				cout << "--- Lista de Contas ---" << endl;
 				while(it!=v.end()){
-					cout << num << ": " << (*it)->tipo() << endl;
+					cout << num << ": " << (*it)->tipo() << ": " << (*it)->getTitular() << endl;
 					it++;
 					num++;
 				}
@@ -90,7 +96,6 @@ int main (){
 					it = v.begin()+num-1;
 					do{	
 						result = (*it)->menu(num);
-
 						switch(result){
 							case 1: //deposito
 								(*it)->deposito();
@@ -99,9 +104,15 @@ int main (){
 								(*it)->saque();
 							break;
 							case 3: //saldo
-							cout << "=================================" << endl;
-							cout << "--- Verificando Saldo ---" << endl;
+								cout << "=================================" << endl;
+								cout << "--- Verificando Saldo ---" << endl;
 								cout << "Saldo: " << (*it)->saldo() << endl;
+							break;
+							case 4:
+								cout << "=================================" << endl;
+								cout << "--- Proxima data de atualizacao ---" << endl;
+								aux = (*it)->getData();
+								cout << "Data: " << aux << endl;
 							break;
 							default:
 							break;
@@ -110,6 +121,18 @@ int main (){
 					}while(result!=0);
 				}
 				else cerr << "IMPOSSIVEL ACESSAR! O ELEMENTO NAO EXISTE..." << endl;
+				
+			break;
+			case 6:
+				cout << "=================================" << endl;
+				cout << "--- Atualizando Data ---" << endl;
+				cout << "Digite a nova data (dd/mm/aaaa): ";
+				cin >> hoje;
+				it = v.begin();
+				while(it!=v.end()){
+					(*it)->atualiza(&hoje);
+					it++;
+				}
 				
 			break;
 			case 0:
